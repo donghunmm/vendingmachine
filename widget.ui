@@ -105,26 +105,26 @@
    <property name="geometry">
     <rect>
      <x>240</x>
-     <y>160</y>
-     <width>87</width>
-     <height>26</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Milk[150]</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pcTea">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
      <y>190</y>
      <width>87</width>
      <height>26</height>
     </rect>
    </property>
    <property name="text">
-    <string>Tea[200]</string>
+    <string>Milk[200]</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pcTea">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>160</y>
+     <width>87</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Tea[150]</string>
    </property>
   </widget>
  </widget>

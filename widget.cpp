@@ -29,8 +29,8 @@ void Widget::changeMoney(int diff) {
 
 void Widget::updateButtons(){
     ui->pcCoffee->setEnabled(money >= 100);
-    ui->pcMilk->setEnabled(money >= 150);
-    ui->pcTea->setEnabled(money >= 200);
+    ui->pcTea->setEnabled(money >= 150);
+    ui->pcMilk->setEnabled(money >= 200);
     ui->pbReset->setEnabled(hasInsertedMoney && money > 0);
 }
 
@@ -65,18 +65,19 @@ void Widget::on_pcCoffee_clicked()
 
 }
 
-void Widget::on_pcMilk_clicked()
+void Widget::on_pcTea_clicked()
 {
     if(money >= 150){
         changeMoney(-150);
     }
 }
-void Widget::on_pcTea_clicked()
+void Widget::on_pcMilk_clicked()
 {
     if(money >= 200){
         changeMoney(-200);
     }
 }
+
 void Widget::on_pbReset_clicked()
 {
 
@@ -88,8 +89,7 @@ void Widget::on_pbReset_clicked()
     money %= 50;
     int C10 = money / 10;
     money %= 10;
-
-    QString msg = QString("500 : %1, 100 : %2, 50 : %3, 10 : %4").arg(C500).arg(C100).arg(C50).arg(C10);
+    QString msg = QString("500원 : %1개 , 100원 : %2개 , 50원 : %3개, 10원 : %4개").arg(C500).arg(C100).arg(C50).arg(C10);
 
     QMessageBox nb;
     nb.information(nullptr,"Change",msg);
